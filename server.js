@@ -48,6 +48,28 @@ app.post('/tasks', async (req, res) => {
   }
 });
 
+// 3. DELETE a task
+app.delete('/tasks/:id', async (req, res) => {
+  try {
+    const task = await Task.findByIdAndDelete(req.params.id);
+    if (!task) return res.status(404).send("Task not found");
+    res.json({ message: "Task deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// 4. UPDATE a task (To edit or mark as complete)
+app.put('/tasks/:id', async (req, res) => {
+  try {
+    const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!task) return res.status(404).send("Task not found");
+    res.json(task);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 // 4. SERVER START
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
