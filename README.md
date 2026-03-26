@@ -25,3 +25,11 @@ A simple and efficient Task Management API built with **Node.js**, **Express**, 
 
 ### 2. Backend & Database Connection
 ![Terminal Test](terminal_test.png)
+
+## ✅ Proof of Work
+### 1. API Response
+![Browser](browser_test.png)
+### 2. Server Connection
+![Terminal](terminal_test.png)
+### 3. Cloud Database
+![Database](mongodb_proof.png)
