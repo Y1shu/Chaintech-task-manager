@@ -18,3 +18,10 @@ A simple and efficient Task Management API built with **Node.js**, **Express**, 
 2. Run `npm install` to install dependencies.
 3. Create a `.env` file and add your `MONGODB_URI`.
 4. Run `node server.js` to start the server.
+
+5. ## ✅ Project Screenshots
+### 1. API Endpoint Test
+![Browser Test](browser_test.png)
+
+### 2. Backend & Database Connection
+![Terminal Test](terminal_test.png)
